@@ -3,383 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reabilitação Inteligente | João Paulo Cardozo</title>
+    <title>Guia de Reabilitação Acelerada | Dr. João Paulo Cardozo</title>
+    <meta name="description" content="Recupere a confiança para voltar a andar. Guia completo passo a passo para pós-operatório de tornozelo.">
     
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦶</text></svg>">
-    
-    <meta name="theme-color" content="#2563eb">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%232563eb%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22900%22 font-size=%2245%22 dy=%22.35em%22>JP</text></svg>">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .active-tab { background-color: #2563eb; color: white; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); }
-        .achievement-card { transition: transform 0.2s; }
-        .achievement-card:active { transform: scale(0.98); }
-        .custom-checkbox:checked + label { text-decoration: line-through; color: #94a3b8; }
-        .animate-fade-in { animation: fadeIn 0.5s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-bg { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); }
+        .check-list li { display: flex; align-items: start; gap: 0.75rem; margin-bottom: 0.75rem; }
+        .check-list li svg { flex-shrink: 0; color: #2563eb; margin-top: 0.25rem; }
+        .pulse-button { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
     </style>
 </head>
-<body class="antialiased min-h-screen pb-32">
+<body class="text-slate-800 antialiased">
 
-    <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-2xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-3 cursor-pointer" onclick="renderPhase(0)">
-                <div class="w-10 h-10 rounded-xl bg-slate-200 flex items-center justify-center shadow-lg overflow-hidden relative border border-slate-100">
-                    <img src="foto-jp.jpg" alt="JP" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='JP'; this.parentElement.classList.add('bg-blue-600', 'text-white', 'font-black', 'italic')">
-                </div>
-                <div>
-                    <span class="block text-[10px] font-black tracking-widest text-slate-400 uppercase">Fisioterapia</span>
-                    <span class="block text-xs font-black tracking-tighter text-slate-800 leading-none">REABILITAÇÃO INTELIGENTE</span>
-                </div>
+    <div class="bg-blue-900 text-white text-center py-2 px-4 text-xs font-bold tracking-wider uppercase">
+        Oferta por tempo limitado • Acesso Imediato
+    </div>
+
+    <header class="hero-bg py-12 lg:py-20 px-6 overflow-hidden relative">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-block bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-6 border border-blue-200">
+                Para Pós-Operatório e Entorses
             </div>
-            <div class="flex items-center gap-3">
-                <div class="text-right hidden sm:block">
-                    <p class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Progresso</p>
-                    <p id="header-perc" class="text-xs font-black text-blue-600">0%</p>
+            <h1 class="text-4xl lg:text-6xl font-black text-slate-900 leading-tight mb-6">
+                Volte a andar com segurança e <span class="text-blue-600 bg-blue-50 px-2 rounded-lg">sem medo de pisar.</span>
+            </h1>
+            <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Transforme sua recuperação em casa com o <strong>Portal de Reabilitação Inteligente</strong>. Um guia passo a passo, do repouso até largar as muletas, criado por um especialista.
+            </p>
+            
+            <div class="aspect-video w-full max-w-2xl mx-auto bg-slate-900 rounded-2xl shadow-2xl mb-10 relative group overflow-hidden border-4 border-white">
+                <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center pl-1 shadow-lg pulse-button">
+                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
                 </div>
-                <div class="w-10 h-10 relative flex items-center justify-center">
-                    <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
-                        <path class="text-slate-100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path id="progress-circle" class="text-blue-600 transition-all duration-1000" stroke-width="3" stroke-dasharray="0, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                    </svg>
-                </div>
+                <img src="https://img.freepik.com/free-photo/physiotherapist-doing-healing-treatment-broken-leg-patient-osteopathy-chiropractic-adjustments_657921-267.jpg" alt="Capa Vídeo" class="w-full h-full object-cover opacity-80">
             </div>
+
+            <a href="https://pay.hotmart.com/P103439990Q?checkoutMode=10" class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-black py-5 px-10 rounded-xl shadow-lg shadow-green-200 transition-transform active:scale-95 uppercase tracking-wide pulse-button">
+                Quero Acelerar Minha Recuperação ➜
+            </a>
+            <p class="text-xs text-slate-400 mt-4 flex items-center justify-center gap-1">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Compra Segura via Hotmart
+            </p>
         </div>
     </header>
 
-    <main class="max-w-2xl mx-auto px-6 py-6">
-        
-        <nav class="flex gap-2 p-1 bg-slate-200 rounded-2xl mb-8 overflow-x-auto no-scrollbar shadow-inner sticky top-20 z-40">
-            <button onclick="renderPhase(0)" id="tab-0" class="flex-1 py-3 px-4 rounded-xl text-[10px] font-black transition-all whitespace-nowrap active-tab">INÍCIO</button>
-            <button onclick="renderPhase(1)" id="tab-1" class="flex-1 py-3 px-4 rounded-xl text-[10px] font-black transition-all whitespace-nowrap text-slate-500">FASE 1</button>
-            <button onclick="renderPhase(2)" id="tab-2" class="flex-1 py-3 px-4 rounded-xl text-[10px] font-black transition-all whitespace-nowrap text-slate-500">FASE 2</button>
-            <button onclick="renderPhase(3)" id="tab-3" class="flex-1 py-3 px-4 rounded-xl text-[10px] font-black transition-all whitespace-nowrap text-slate-500">FASE 3</button>
-        </nav>
-
-        <div id="phase-content" class="animate-fade-in"></div>
-
-    </main>
-
-    <nav class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 p-4 z-50 safe-area-bottom">
-        <div class="max-w-2xl mx-auto flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-xl">💬</div>
-                <div>
-                    <p class="text-[10px] font-black text-slate-400 leading-none">DÚVIDAS?</p>
-                    <p class="text-xs font-bold text-slate-700">Suporte Técnico</p>
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-2xl font-black text-slate-800 mb-8 text-center">Você sente essa insegurança?</h2>
+            <div class="space-y-4">
+                <div class="flex gap-4 p-4 bg-red-50 rounded-2xl border border-red-100">
+                    <div class="text-2xl">😰</div>
+                    <div>
+                        <h3 class="font-bold text-red-900 text-sm uppercase">Medo de Pisar</h3>
+                        <p class="text-sm text-red-700">"Será que se eu colocar o pé no chão a cirurgia vai abrir ou sair do lugar?"</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                    <div class="text-2xl">🤔</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-sm uppercase">Falta de Orientação</h3>
+                        <p class="text-sm text-slate-600">O médico operou e disse "faz fisioterapia", mas você está em casa sem saber o que fazer hoje.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                    <div class="text-2xl">📉</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-sm uppercase">Rigidez Articular</h3>
+                        <p class="text-sm text-slate-600">Sente o tornozelo "travado" e com medo de ficar mancando para sempre.</p>
+                    </div>
                 </div>
             </div>
-            <a href="mailto:joaopfisioterapeuta@gmail.com" class="bg-slate-900 text-white px-5 py-3 rounded-xl text-[10px] font-black shadow-lg active:scale-95 transition-transform">ENVIAR E-MAIL</a>
         </div>
-    </nav>
+    </section>
 
-    <script>
-        // --- DADOS DO PORTAL ---
-        const portalData = {
-            0: {
-                type: "intro",
-                title: "👋 Seja bem-vindo à sua recuperação!",
-                intro: "Você não precisa passar por isso sozinho. Este guia foi desenhado para te levar com segurança desde o repouso até sua volta a caminhar.",
-                instructions: "Identifique em qual fase você está e toque nela para abrir. Siga o checklist de cada fase antes de avançar.",
-                phases_summary: [
-                    { id: 1, icon: "🛡️", title: "Fase 1: Proteção", sub: "Semana 0-4 • Foco em desinchar" },
-                    { id: 2, icon: "👣", title: "Fase 2: Mobilidade", sub: "Médico liberou pé no chão" },
-                    { id: 3, icon: "💪", title: "Fase 3: Força Total", sub: "Carga Total liberada" }
-                ],
-                disclaimer: "⚠️ Aviso: O retorno ao esporte exige avaliação presencial do seu médico."
-            },
-            1: {
-                title: "FASE 1: 🛡️ Proteção e Controle",
-                subtitle: "Semanas 0 a 4",
-                intro: "Objetivo Principal: Controlar a dor e o inchaço (edema) da cirurgia e 'acordar' os músculos da perna sem prejudicar a cicatrização.",
-                warning: "🚨 Sinais de Alerta: Dor aguda na panturrilha (Trombose), secreção na ferida ou dedos pálidos/frios.",
-                regraOuro: "A Regra de Ouro: Nesta fase, menos é mais. Se sentir dor aguda ou 'pontadas' na cirurgia, pare imediatamente.",
-                driveLink: "https://drive.google.com/file/d/1N7-q2EIOh5bYqCLatPmHZFw73GjCUK-E/view?usp=drivesdk",
-                achievements: [
-                    "Ferida cirúrgica está seca e cicatrizada",
-                    "Consigo controlar a dor sem remédios fortes",
-                    "Inchaço diminui após repouso com gelo",
-                    "Consigo ficar sentado com pé no chão 15-20min sem dor"
-                ],
-                sections: [
-                    {
-                        name: "Protocolo de Proteção (Diário)",
-                        desc: "🧊 Gelo: 20min a cada 4h.\n🦵 Elevação: Perna acima do coração 30min (3x/dia).\n🦶 Movimento: Mexer dedos sempre.",
-                        dosage: "Todo dia"
-                    },
-                    {
-                        name: "1. Bombeamento Isométrico (A 'Bomba')",
-                        desc: "Faça força na batata da perna como se quisesse pisar no acelerador, mas SEM deixar o pé mexer. Segure 3s e relaxe.",
-                        dosage: "3x 10 reps"
-                    },
-                    {
-                        name: "2. O 'Pianista' (Mobilidade)",
-                        desc: "Com a perna esticada, tente abrir bem os dedos dos pés e depois fechar com força (agarrar objeto).",
-                        dosage: "3x 15 reps"
-                    },
-                    {
-                        name: "3. Ativação de Glúteo",
-                        desc: "Deitado, aperte uma nádega contra a outra com força. Segure 5s e relaxe. Ajuda na estabilidade do quadril.",
-                        dosage: "3x 15 reps"
-                    },
-                    {
-                        name: "4. Elevação de Perna",
-                        desc: "Deitado, trave o joelho (perna dura) e levante a perna inteira esticada. Fortalece a coxa sem forçar o pé.",
-                        dosage: "3x 10 reps"
-                    },
-                    {
-                        name: "5. Pé no Chão (Adaptação)",
-                        desc: "Sentado, apoie a planta do pé suavemente no chão sem jogar peso. Comece com 2 min e aumente até 15 min.",
-                        dosage: "2 min -> 15 min"
-                    }
-                ]
-            },
-            2: {
-                title: "FASE 2: 👣 Mobilidade",
-                subtitle: "Pé no chão liberado",
-                intro: "Objetivo: Recuperar o movimento do tornozelo (para cima e para baixo) e começar a acostumar o pé a tocar no chão novamente.",
-                warning: "⚠️ Requisito: O exercício de 'Balança' só deve ser feito se o médico liberou Carga Parcial.",
-                driveLink: "https://drive.google.com/file/d/1aECf1_hLa0Xfyr_RHAvSQXT_GInZ7TqL/view?usp=drivesdk",
-                achievements: [
-                    "Apoio a planta do pé toda no chão sem dor",
-                    "Médico liberou largar uma das muletas",
-                    "O inchaço diminuiu bem"
-                ],
-                sections: [
-                    {
-                        name: "1. Alongamento com Toalha",
-                        desc: "Puxe a ponta do pé com uma toalha até sentir 'repuxar' a batata da perna.",
-                        dosage: "3x 30 seg"
-                    },
-                    {
-                        name: "2. O 'Acelerador' Sem Carga",
-                        desc: "Leve o pé o máximo para cima e para baixo. Tente ganhar 1mm a cada repetição. Movimento lento.",
-                        dosage: "3x 15 reps"
-                    },
-                    {
-                        name: "3. O Acelerador (Com Elástico)",
-                        desc: "Empurre para baixo contra o elástico e segure a volta bem devagar. O segredo é o controle.",
-                        dosage: "3x 15 reps"
-                    },
-                    {
-                        name: "4. Descarga de Peso (Balança)",
-                        desc: "Em pé com muletas, transfira levemente o peso para o pé operado (como pisar em ovos).",
-                        dosage: "3x 1 min"
-                    }
-                ]
-            },
-            3: {
-                title: "FASE 3: 💪 Força Total",
-                subtitle: "Carga Total Liberada",
-                intro: "Objetivo: Recuperar a força da panturrilha (essencial para andar sem mancar) e treinar o equilíbrio.",
-                warning: "⛔ Requisito: Só inicie se o médico liberou Carga Total (pisar com todo o peso).",
-                driveLink: "https://drive.google.com/file/d/1s96n1p49pQJZC0OXRtFfHr0oVYTG4op2/view?usp=drivesdk",
-                achievements: [
-                    "Fico na ponta dos pés sem dor",
-                    "Equilíbrio num pé só (10s)",
-                    "Subo degraus sem apoio",
-                    "Caminho sem coxear"
-                ],
-                sections: [
-                    {
-                        name: "1. O Joelho na Parede (Mobilidade)",
-                        desc: "Pé a 10cm da parede, toque o joelho na parede sem tirar o calcanhar do chão. Segure 2s.",
-                        dosage: "3x 12 reps"
-                    },
-                    {
-                        name: "2. Elevação de Calcanhar",
-                        desc: "Suba na ponta dos pés (Bipodal). Evolua para um pé só (Unipodal) descendo bem devagar.",
-                        dosage: "3x 15 reps"
-                    },
-                    {
-                        name: "3. Mini-Agachamento",
-                        desc: "Apoie na cadeira e dobre levemente os joelhos. Não tire calcanhares do chão. Não precisa descer muito.",
-                        dosage: "3x 10 reps"
-                    },
-                    {
-                        name: "4. Equilíbrio Unipodal (O 'Garça')",
-                        desc: "Equilibre-se na perna operada. Tente soltar a mão da parede aos poucos.",
-                        dosage: "3x 30 seg"
-                    },
-                    {
-                        name: "5. Passo sobre Obstáculo",
-                        desc: "Passe a perna boa por cima de um objeto enquanto equilibra na operada.",
-                        dosage: "3x 10 voltas"
-                    }
-                ]
-            }
-        };
-
-        // --- LÓGICA DO APP ---
-        let userState = JSON.parse(localStorage.getItem('jp_portal_state')) || {};
-        let activePhase = 0;
-
-        function renderPhase(id) {
-            activePhase = id;
-            const container = document.getElementById('phase-content');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // Atualiza botões do menu (Tabs)
-            for(let i=0; i<=3; i++) {
-                const btn = document.getElementById('tab-'+i);
-                if(btn) {
-                    if (i === id) {
-                        btn.className = "flex-1 py-3 px-4 rounded-xl text-[10px] font-black transition-all whitespace-nowrap active-tab scale-105";
-                    } else {
-                        btn.className = "flex-1 py-3 px-4 rounded-xl text-[10px] font-black transition-all whitespace-nowrap text-slate-500 bg-white hover:text-blue-600";
-                    }
-                }
-            }
-
-            // --- TELA DE INÍCIO (INTRO) ---
-            if (id === 0) {
-                const data = portalData[0];
-                container.innerHTML = `
-                    <div class="animate-fade-in space-y-6">
-                        <div class="bg-blue-600 rounded-[2rem] p-8 text-white shadow-xl relative overflow-hidden">
-                            <div class="relative z-10">
-                                <h2 class="text-3xl font-black mb-4 leading-tight">${data.title}</h2>
-                                <p class="text-blue-100 text-sm leading-relaxed mb-6 font-medium">${data.intro}</p>
-                                <p class="text-[10px] font-black uppercase tracking-widest text-blue-300">Como usar:</p>
-                                <p class="text-xs text-blue-50 mt-1">${data.instructions}</p>
-                            </div>
-                            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500 rounded-full opacity-50"></div>
-                        </div>
-
-                        <div class="grid grid-cols-1 gap-4">
-                            ${data.phases_summary.map(phase => `
-                                <div onclick="renderPhase(${phase.id})" class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm cursor-pointer hover:border-blue-300 transition-all flex items-center gap-4 group active:scale-95">
-                                    <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">${phase.icon}</div>
-                                    <div>
-                                        <h3 class="font-black text-slate-800">${phase.title}</h3>
-                                        <p class="text-xs text-slate-500">${phase.sub}</p>
-                                    </div>
-                                    <div class="ml-auto text-blue-300">➜</div>
-                                </div>
-                            `).join('')}
-                        </div>
-
-                        <p class="text-[10px] text-slate-400 text-center px-8 leading-relaxed mt-8">${data.disclaimer}</p>
+    <section class="py-16 px-6 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div class="max-w-4xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1">
+                <span class="text-blue-400 font-black tracking-widest text-xs uppercase mb-2 block">Apresentando</span>
+                <h2 class="text-3xl lg:text-4xl font-black mb-6 leading-tight">Muito mais que um PDF.<br>Um <span class="text-blue-500">App Inteligente.</span></h2>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Esqueça folhas soltas ou vídeos aleatórios do YouTube. Tenha acesso a um <strong>Portal Interativo</strong> que guia você fase por fase.
+                </p>
+                <ul class="check-list text-slate-200 text-sm font-medium">
+                    <li>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        Vídeos demonstrativos de cada exercício
+                    </li>
+                    <li>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        Checklist de segurança (Saiba quando avançar)
+                    </li>
+                    <li>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        Barra de Progresso e Gamificação
+                    </li>
+                    <li>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        Funciona no celular, tablet ou computador
+                    </li>
+                </ul>
+            </div>
+            <div class="w-64 md:w-80 shrink-0">
+                <div class="border-8 border-slate-800 rounded-[2.5rem] overflow-hidden shadow-2xl bg-white relative">
+                    <div class="bg-blue-600 p-6 text-white text-center pb-12">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl mx-auto mb-2 flex items-center justify-center font-bold italic">JP</div>
+                        <p class="text-[10px] font-bold uppercase opacity-70">Portal do Paciente</p>
+                        <h3 class="font-black text-xl">Fase 1: Proteção</h3>
                     </div>
-                `;
-                return;
-            }
-
-            // --- TELA DAS FASES (1, 2, 3) ---
-            const data = portalData[id];
-            
-            let html = `
-                <div class="animate-fade-in">
-                    <div class="mb-8">
-                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-[10px] font-bold uppercase mb-2 tracking-wider">${data.subtitle}</span>
-                        <h2 class="text-3xl font-black text-slate-900 leading-tight mb-3">${data.title}</h2>
-                        <p class="text-slate-600 text-sm leading-relaxed">${data.intro}</p>
-                        
-                        ${data.regraOuro ? `
-                        <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-xl">
-                            <p class="text-xs text-blue-800 font-bold leading-relaxed">${data.regraOuro}</p>
-                        </div>` : ''}
-
-                        ${data.warning ? `
-                        <div class="mt-4 p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-xl">
-                            <p class="text-xs text-amber-800 font-bold leading-relaxed">${data.warning}</p>
-                        </div>` : ''}
-
-                        <a href="${data.driveLink}" target="_blank" class="mt-6 flex items-center justify-center gap-3 w-full bg-blue-600 text-white py-4 rounded-2xl shadow-lg shadow-blue-200 active:scale-95 transition-transform group">
-                            <span class="text-xl group-hover:scale-110 transition-transform">🎥</span>
-                            <span class="font-black text-sm uppercase tracking-wider">Assistir Vídeo da Aula</span>
-                        </a>
-                    </div>
-
-                    <div class="mb-10 bg-white rounded-3xl p-6 shadow-sm border border-slate-100">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Checklist de Evolução</h3>
-                            <span id="phase-counter" class="text-[10px] font-black text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">0/0</span>
+                    <div class="bg-white p-4 -mt-6 rounded-t-3xl relative z-10 space-y-3 pb-8">
+                        <div class="h-2 w-12 bg-slate-200 rounded-full mx-auto mb-4"></div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="w-5 h-5 rounded border-2 border-slate-300"></div>
+                            <div class="h-2 w-32 bg-slate-200 rounded"></div>
                         </div>
-                        <div class="space-y-3">
-                            ${data.achievements.map((ach, idx) => {
-                                const key = `f${id}_c${idx}`;
-                                const isChecked = userState[key] ? 'checked' : '';
-                                return `
-                                    <div onclick="toggleAch('${key}')" class="achievement-card flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 cursor-pointer transition-colors">
-                                        <input type="checkbox" ${isChecked} class="custom-checkbox w-5 h-5 rounded border-slate-300 text-blue-600 mt-0.5 pointer-events-none">
-                                        <label class="text-xs font-bold text-slate-700 cursor-pointer select-none leading-relaxed">${ach}</label>
-                                    </div>
-                                `;
-                            }).join('')}
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="w-5 h-5 rounded border-2 border-blue-500 bg-blue-500"></div>
+                            <div class="h-2 w-24 bg-slate-200 rounded"></div>
                         </div>
-                    </div>
-
-                    <div class="space-y-6">
-                        <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-widest pl-2">Exercícios da Fase</h3>
-                        ${data.sections.map(section => `
-                            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm p-6">
-                                <div class="flex justify-between items-start mb-2 gap-4">
-                                    <h4 class="font-black text-slate-800 text-sm italic">${section.name}</h4>
-                                    <span class="text-[9px] font-black bg-slate-900 text-white px-2 py-1 rounded-lg uppercase whitespace-nowrap shrink-0">${section.dosage}</span>
-                                </div>
-                                <p class="text-slate-500 text-xs leading-relaxed mb-0 whitespace-pre-line">${section.desc}</p>
-                            </div>
-                        `).join('')}
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="w-5 h-5 rounded border-2 border-slate-300"></div>
+                            <div class="h-2 w-28 bg-slate-200 rounded"></div>
+                        </div>
                     </div>
                 </div>
-            `;
+            </div>
+        </div>
+    </section>
 
-            container.innerHTML = html;
-            updateUI();
-        }
+    <section class="py-16 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black text-slate-800">O Método Dividido em 3 Fases</h2>
+                <p class="text-slate-500 mt-2">Você nunca ficará perdido. O app te diz exatamente onde você está.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-blue-300 transition-colors">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-4">🛡️</div>
+                    <h3 class="font-black text-slate-800 text-lg mb-2">Fase 1: Proteção</h3>
+                    <p class="text-xs text-slate-500 mb-4 font-bold uppercase tracking-wider">Semanas 0 a 4</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">Aprenda a controlar o inchaço, ativar a circulação e proteger a cirurgia sem ficar parado.</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-blue-300 transition-colors relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl">Mais Importante</div>
+                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-4">👣</div>
+                    <h3 class="font-black text-slate-800 text-lg mb-2">Fase 2: Mobilidade</h3>
+                    <p class="text-xs text-slate-500 mb-4 font-bold uppercase tracking-wider">Pé no Chão</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">Exercícios seguros para recuperar o movimento de 90º e começar a pisar (Carga Parcial).</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-blue-300 transition-colors">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-4">💪</div>
+                    <h3 class="font-black text-slate-800 text-lg mb-2">Fase 3: Força</h3>
+                    <p class="text-xs text-slate-500 mb-4 font-bold uppercase tracking-wider">Volta à Rotina</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">Fortalecimento de panturrilha e treino de equilíbrio para largar as muletas de vez.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        function toggleAch(key) {
-            userState[key] = !userState[key];
-            localStorage.setItem('jp_portal_state', JSON.stringify(userState));
-            renderPhase(activePhase);
-        }
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8">
+            <div class="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-blue-100 shrink-0 shadow-lg">
+                <img src="https://via.placeholder.com/200x200?text=JP" alt="Dr. João Paulo" class="w-full h-full object-cover">
+            </div>
+            <div class="text-center md:text-left">
+                <p class="text-xs font-black text-blue-600 uppercase tracking-widest mb-2">QUEM CRIOU O MÉTODO</p>
+                <h2 class="text-2xl font-black text-slate-900 mb-4">Dr. João Paulo Cardozo</h2>
+                <p class="text-slate-600 mb-4 leading-relaxed">
+                    Fisioterapeuta (CREFITO 362213-F) com formação em Osteopatia. Desenvolvi este método após tratar centenas de pacientes que chegavam ao consultório com o tornozelo rígido por falta de orientação correta no pós-operatório imediato.
+                </p>
+                <div class="inline-block bg-slate-100 px-4 py-2 rounded-lg text-xs font-bold text-slate-700">
+                    🎓 Especialista em Reabilitação Traumato-Ortopédica
+                </div>
+            </div>
+        </div>
+    </section>
 
-        function updateUI() {
-            // Conta Progresso Global
-            let total = 0, done = 0;
-            Object.keys(portalData).forEach(pId => {
-                if(pId === "0") return; 
-                portalData[pId].achievements.forEach((_, idx) => {
-                    total++;
-                    if(userState[`f${pId}_c${idx}`]) done++;
-                });
-            });
+    <section class="py-16 px-6 bg-blue-600 text-white text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-black mb-6">Quanto vale voltar a andar antes?</h2>
+            <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-2xl max-w-sm mx-auto transform hover:scale-105 transition-transform duration-300">
+                <p class="text-sm text-slate-400 font-bold uppercase tracking-wider mb-2">Oferta Especial</p>
+                <div class="flex justify-center items-end gap-2 mb-2">
+                    <span class="text-lg text-slate-400 line-through">R$ 197</span>
+                </div>
+                <div class="text-5xl font-black text-blue-600 mb-2">R$ 47,90</div>
+                <p class="text-xs text-slate-500 font-medium mb-6">Pagamento único • Acesso Vitalício</p>
+                
+                <hr class="border-slate-100 mb-6">
+                
+                <ul class="text-left space-y-3 mb-8">
+                    <li class="flex items-center gap-3 text-sm font-bold text-slate-700">
+                        <span class="text-green-500">✓</span> Acesso ao Web App
+                    </li>
+                    <li class="flex items-center gap-3 text-sm font-bold text-slate-700">
+                        <span class="text-green-500">✓</span> Vídeo Aulas das 3 Fases
+                    </li>
+                    <li class="flex items-center gap-3 text-sm font-bold text-slate-700">
+                        <span class="text-green-500">✓</span> Checklist de Segurança
+                    </li>
+                    <li class="flex items-center gap-3 text-sm font-bold text-slate-700">
+                        <span class="text-green-500">✓</span> Suporte por E-mail
+                    </li>
+                </ul>
 
-            const perc = Math.round((done/total)*100) || 0;
-            document.getElementById('header-perc').innerText = perc + '%';
-            document.getElementById('progress-circle').setAttribute('stroke-dasharray', `${perc}, 100`);
+                <a href="https://pay.hotmart.com/P103439990Q?checkoutMode=10" class="block w-full bg-green-500 hover:bg-green-600 text-white font-black py-4 rounded-xl shadow-lg shadow-green-200 transition-colors uppercase tracking-wide pulse-button">
+                    Comprar Agora
+                </a>
+                <p class="text-[10px] text-slate-400 mt-4 text-center">Menos que o valor de 1 sessão de fisio.</p>
+            </div>
+            
+            <div class="mt-10 flex items-center justify-center gap-4 opacity-80">
+                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl">🛡️</div>
+                <div class="text-left">
+                    <p class="text-xs font-bold uppercase text-blue-200">Garantia Incondicional</p>
+                    <p class="font-bold text-white">7 Dias para testar ou seu dinheiro de volta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            // Conta Progresso da Fase
-            if(activePhase !== 0) {
-                const phaseTotal = portalData[activePhase].achievements.length;
-                let phaseDone = 0;
-                portalData[activePhase].achievements.forEach((_, idx) => {
-                    if(userState[`f${activePhase}_c${idx}`]) phaseDone++;
-                });
-                document.getElementById('phase-counter').innerText = `${phaseDone}/${phaseTotal}`;
+    <section class="py-16 px-6 bg-slate-50">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-2xl font-black text-slate-800 mb-8 text-center">Dúvidas Frequentes</h2>
+            <div class="space-y-4">
+                <details class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 cursor-pointer group">
+                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center">
+                        Serve para quem já operou há muito tempo?
+                        <span class="text-blue-600 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-600 mt-3 leading-relaxed">Sim! Se você ainda sente rigidez, medo de pisar ou manca ao andar, os exercícios da Fase 2 e 3 são fundamentais para destravar seu tornozelo.</p>
+                </details>
+                <details class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 cursor-pointer group">
+                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center">
+                        Preciso baixar algum aplicativo?
+                        <span class="text-blue-600 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-600 mt-3 leading-relaxed">Não ocupa memória do seu celular! É um Web App (Site Interativo). Você recebe o link, acessa e pode salvar o ícone na sua tela inicial como se fosse um app.</p>
+                </details>
+                <details class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 cursor-pointer group">
+                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center">
+                        Substitui a fisioterapia presencial?
+                        <span class="text-blue-600 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-600 mt-3 leading-relaxed">Este é um guia de aceleração e suporte. Em casos cirúrgicos complexos, recomendamos que o guia seja um complemento ao seu tratamento presencial, acelerando seus resultados em casa.</p>
+                </details>
+            </div>
+        </div>
+    </section>
 
-                // 4. EFEITO DE CONFETTI SE COMPLETAR A FASE
-                if(phaseDone === phaseTotal && phaseTotal > 0) {
-                    confetti({
-                        particleCount: 100,
-                        spread: 70,
-                        origin: { y: 0.6 }
-                    });
-                }
-            }
-        }
+    <footer class="bg-white py-8 border-t border-slate-200 text-center">
+        <p class="text-xs text-slate-400">
+            © 2024 João Paulo Cardozo Fisioterapia.<br>
+            CREFITO 362213-F • Todos os direitos reservados.
+        </p>
+        <p class="text-[10px] text-slate-300 mt-2 max-w-xs mx-auto">
+            Este produto não substitui o parecer médico profissional. Consulte sempre um profissional da saúde para tratar de assuntos relativos à saúde.
+        </p>
+    </footer>
 
-        window.onload = () => {
-            renderPhase(0);
-        };
-    </script>
 </body>
 </html>
