@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo de Reabilitação | João Paulo Cardozo</title>
+    <meta name="description" content="Perca o medo de pisar. O guia definitivo para acelerar sua recuperação de tornozelo em casa.">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%232563eb%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22900%22 font-size=%2245%22 dy=%22.35em%22>JP</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-bg { background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); }
+        .phone-frame {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 8px solid #1e293b;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+        }
+        /* Animação do Botão Pulsando */
+        .pulse-btn { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <div class="bg-blue-900 text-blue-50 text-center py-3 px-4 text-xs font-bold uppercase tracking-widest">
+        Acesso Imediato ao Portal • Oferta de Lançamento
+    </div>
+
+    <header class="hero-bg pt-12 pb-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            
+            <div class="flex-1 text-center md:text-left">
+                <div class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-6 border border-blue-200">
+                    Pós-Operatório & Entorses
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-black text-slate-900 leading-[1.1] mb-6">
+                    Está com <span class="text-blue-600">medo de pisar</span> e sente o tornozelo travado?
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                    A cirurgia acabou, mas a dúvida ficou: <em>"Será que estou fazendo certo?"</em>. <br>
+                    Descubra o método passo a passo para destravar seu movimento, perder o medo e voltar a andar com segurança — <strong>sem depender apenas de idas ao consultório.</strong>
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="https://pay.hotmart.com/P103439990Q?checkoutMode=10" class="bg-green-500 hover:bg-green-600 text-white text-lg font-black py-4 px-8 rounded-xl shadow-xl shadow-green-200 transition-transform active:scale-95 uppercase tracking-wide pulse-btn text-center">
+                        Quero Destravar Meu Pé
+                    </a>
+                </div>
+                <p class="text-xs text-slate-400 mt-3 flex items-center justify-center md:justify-start gap-1">
+                    🔒 Compra 100% Segura via Hotmart
+                </p>
+            </div>
+
+            <div class="w-full max-w-lg md:w-1/2">
+                <div class="aspect-video bg-black rounded-2xl shadow-2xl overflow-hidden relative border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                    
+                    <video controls class="w-full h-full object-cover" poster="foto-jp.jpg">
+                        <source src="video-vendas.mp4" type="video/mp4">
+                        Seu navegador não suporta a reprodução de vídeos.
+                    </video>
+
+                </div>
+                <p class="text-center text-xs text-slate-400 mt-4 font-medium">Assista ao vídeo para entender o método</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl font-black text-slate-800 mb-10">Se você sente isso, este guia é para você:</h2>
+            <div class="grid gap-6 text-left">
+                <div class="flex gap-5 p-6 bg-slate-50 rounded-2xl border-l-4 border-red-400 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-3xl shrink-0">😨</span>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg">Insegurança Total</h3>
+                        <p class="text-sm text-slate-600 mt-1">Você tem medo de colocar o pé no chão e "estragar" o que o médico fez.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5 p-6 bg-slate-50 rounded-2xl border-l-4 border-amber-400 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-3xl shrink-0">🧱</span>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg">Tornozelo "Duro"</h3>
+                        <p class="text-sm text-slate-600 mt-1">Sente a articulação travada pela manhã e não sabe quais exercícios pode fazer para soltar.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5 p-6 bg-slate-50 rounded-2xl border-l-4 border-blue-400 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-3xl shrink-0">🏠</span>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg">Perdido em Casa</h3>
+                        <p class="text-sm text-slate-600 mt-1">Vai na fisio 2x na semana, mas nos outros 5 dias fica em casa sem saber o que fazer para acelerar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-slate-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-600 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+            
+            <div class="flex-1 text-white">
+                <h2 class="text-3xl lg:text-4xl font-black mb-6 leading-tight">
+                    Não é um PDF chato.<br>
+                    É um <span class="text-blue-400">Portal Interativo.</span>
+                </h2>
+                <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                    Esqueça folhas de papel que você perde. Eu transformei meu método clínico em um <strong>Aplicativo Web</strong> que te guia exatamente pelo que você precisa fazer hoje.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-xl">1</div>
+                        <div>
+                            <h4 class="font-bold text-white">Sabe exatamente o que fazer</h4>
+                            <p class="text-sm text-slate-400">O app te diz: "Hoje é dia de gelo e movimento leve". Acabou a dúvida.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-xl">2</div>
+                        <div>
+                            <h4 class="font-bold text-white">Gamificação Motivadora</h4>
+                            <p class="text-sm text-slate-400">Marque os exercícios feitos e veja sua barra de progresso subir. É viciante ver sua melhora.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-xl">3</div>
+                        <div>
+                            <h4 class="font-bold text-white">Vídeos Passo a Passo</h4>
+                            <p class="text-sm text-slate-400">Eu gravei a execução correta. Você assiste no celular enquanto faz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full max-w-[300px] shrink-0 transform md:rotate-3 hover:rotate-0 transition-all duration-500">
+                <div class="phone-frame aspect-[9/19] bg-slate-100 shadow-2xl">
+                    <img src="print-app.jpg" alt="Interface do Portal no Celular" class="w-full h-full object-cover">
+                </div>
+                <p class="text-center text-white/50 text-xs mt-4">Funciona no iPhone e Android</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div class="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-slate-100 shadow-xl shrink-0">
+                <img src="foto-jp.jpg" alt="João Paulo Cardozo" class="w-full h-full object-cover">
+            </div>
+            <div class="text-center md:text-left flex-1">
+                <p class="text-xs font-black text-blue-600 uppercase tracking-widest mb-2">SOBRE O AUTOR</p>
+                <h2 class="text-2xl font-black text-slate-900 mb-4">João Paulo Cardozo</h2>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 italic text-slate-600 mb-4 text-lg">
+                    "Atendo frequentemente pacientes que, quando chegam, têm medo de pisar. Criei este método justamente para preencher essa lacuna de orientação nos dias em que você não está no consultório."
+                </div>
+                <p class="text-sm text-slate-500">
+                    Fisioterapeuta (CREFITO 362213-F). Meu foco é simplificar sua recuperação para que você volte à sua rotina com segurança.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-black text-slate-900 mb-8">Quanto custa recuperar sua liberdade?</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center max-w-3xl mx-auto">
+                <div class="text-left space-y-4 opacity-70 grayscale hover:grayscale-0 transition-all">
+                    <h3 class="font-bold text-slate-400 uppercase text-xs tracking-widest">O Caminho Tradicional</h3>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200">
+                        <p class="font-bold text-slate-700">1 Sessão de Fisioterapia Particular</p>
+                        <p class="text-sm text-slate-500">Média de R$ 100,00 a R$ 150,00</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200">
+                        <p class="font-bold text-slate-700">Uber/Transporte (Ida e Volta)</p>
+                        <p class="text-sm text-slate-500">Média de R$ 30,00</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-2xl border-2 border-blue-600 relative overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute top-0 right-0 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl">MAIS BARATO QUE 1 SESSÃO</div>
+                    
+                    <p class="text-sm text-slate-500 font-bold mb-2">Acesso Vitalício ao Portal</p>
+                    <div class="text-5xl font-black text-blue-600 mb-2">R$ 47,90</div>
+                    <p class="text-xs text-slate-400 mb-6">Pagamento único • Sem mensalidade</p>
+                    
+                    <a href="https://pay.hotmart.com/P103439990Q?checkoutMode=10" class="block w-full bg-green-500 hover:bg-green-600 text-white font-black py-4 rounded-xl shadow-lg shadow-green-200 transition-colors uppercase tracking-wide pulse-btn mb-4">
+                        Comprar Agora
+                    </a>
+                    
+                    <div class="text-xs text-slate-500 space-y-2 text-left px-4">
+                        <p class="flex gap-2">✅ <span><strong>Segurança:</strong> Checklist de quando avançar</span></p>
+                        <p class="flex gap-2">✅ <span><strong>Vídeos:</strong> Aprenda o jeito certo</span></p>
+                        <p class="flex gap-2">✅ <span><strong>Suporte:</strong> Tire dúvidas por e-mail</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-2xl font-black text-slate-800 mb-8 text-center">Dúvidas Frequentes</h2>
+            <div class="space-y-4">
+                <details class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 cursor-pointer group">
+                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center">
+                        Serve para quem já operou há muito tempo?
+                        <span class="text-blue-600 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-600 mt-3 leading-relaxed">Sim! Se você ainda sente rigidez, medo de pisar ou manca ao andar, os exercícios da Fase 2 e 3 são fundamentais para destravar seu tornozelo.</p>
+                </details>
+                <details class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 cursor-pointer group">
+                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center">
+                        Preciso baixar algum aplicativo?
+                        <span class="text-blue-600 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-600 mt-3 leading-relaxed">Não ocupa memória do seu celular! É um Web App (Site Interativo). Você recebe o link, acessa e pode salvar o ícone na sua tela inicial como se fosse um app.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-12 border-t border-slate-200 text-center px-6">
+        <p class="text-xs text-slate-400 font-bold mb-2">JOÃO PAULO CARDOZO • CREFITO 362213-F</p>
+        <p class="text-[10px] text-slate-300 max-w-md mx-auto leading-relaxed">
+            Os resultados podem variar de pessoa para pessoa. Este produto não garante a cura de lesões graves sem acompanhamento presencial. Em caso de dor persistente, procure seu médico.
+        </p>
+    </footer>
+
+</body>
+</html>
