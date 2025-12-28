@@ -21,7 +21,6 @@
             overflow: hidden;
             position: relative;
             background: #000;
-            /* Garante que a imagem cubra tudo */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,12 +66,10 @@
 
             <div class="w-full max-w-sm md:w-1/3 mx-auto md:mx-0">
                 <div class="aspect-[9/16] bg-black rounded-2xl shadow-2xl overflow-hidden relative border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                    
                     <video controls class="w-full h-full object-cover" poster="foto-jp.jpg">
                         <source src="video-vendas.mp4" type="video/mp4">
                         Seu navegador não suporta a reprodução de vídeos.
                     </video>
-
                 </div>
                 <p class="text-center text-xs text-slate-400 mt-4 font-medium">Assista ao vídeo (Formato Vertical)</p>
             </div>
@@ -154,6 +151,49 @@
                 <p class="text-center text-white/50 text-xs mt-4">Funciona no iPhone e Android</p>
             </div>
 
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center mb-12">
+                <span class="text-blue-600 font-bold tracking-widest text-xs uppercase">Tecnologia Clínica</span>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900">Por que é mais seguro que vídeos do YouTube?</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="bg-amber-50 p-6 rounded-2xl border border-amber-100 relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white text-2xl shadow-lg">🛡️</div>
+                    <h3 class="mt-4 font-bold text-lg text-slate-900 mb-2">Travas de Segurança Médica</h3>
+                    <p class="text-sm text-slate-600 mb-4">O maior medo é "fazer errado". O Portal possui avisos de segurança (iguais aos do hospital) que te alertam se você ainda não está pronto para um movimento.</p>
+                    <div class="bg-white p-3 rounded-lg border-l-4 border-amber-500 shadow-sm text-xs text-slate-500 italic">
+                        "⚠️ Só realize o exercício 'Balança' se o médico já liberou Carga Parcial..."
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 relative">
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg">🎯</div>
+                    <h3 class="mt-4 font-bold text-lg text-slate-900 mb-2">Metas Visuais Concretas</h3>
+                    <p class="text-sm text-slate-600 mb-4">Você não faz exercícios aleatórios. Você cumpre missões diárias para atingir marcos reais da reabilitação.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Pé atinge 90º (Ângulo Reto)
+                        </li>
+                        <li class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Consigo calçar tênis sem dor
+                        </li>
+                        <li class="flex items-center gap-2 text-xs font-medium text-slate-700">
+                            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Descendo escadas com segurança
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </section>
 
