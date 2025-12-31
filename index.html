@@ -40,7 +40,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Melhoria visual do frame */
             outline: 2px solid #334155;
         }
         .pulse-btn { animation: pulse 2s infinite; }
@@ -136,56 +135,66 @@
                     Não é um PDF chato.<br>É um <span class="text-blue-600">Portal Interativo.</span>
                 </h2>
                 <p class="text-slate-600 mt-4 max-w-2xl mx-auto">
-                    Esqueça folhas de papel. Eu transformei meu método clínico em um Web App que organiza sua rotina.
+                    Esqueça folhas de papel. Eu transformei meu método clínico em um Web App que te guia até a alta médica.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="grid md:grid-cols-2 gap-8 items-start">
                 
-                <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-blue-200 transition-colors group">
+                <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-blue-200 transition-colors group h-full">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                             <i data-lucide="play" class="w-4 h-4 fill-white"></i>
                         </div>
-                        <h3 class="font-bold text-slate-800 text-lg">Execução em Vídeo</h3>
-                    </div>
-                    <div class="bg-slate-100 rounded-xl aspect-video w-full mb-4 relative overflow-hidden flex items-center justify-center border border-slate-200">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
-                            <i data-lucide="play" class="w-5 h-5 text-slate-900 fill-slate-900 ml-1"></i>
-                        </div>
-                        <div class="absolute bottom-3 left-3 right-3 h-1 bg-slate-300 rounded-full overflow-hidden">
-                            <div class="w-1/3 h-full bg-blue-600"></div>
-                        </div>
-                    </div>
-                    <p class="text-sm text-slate-600 leading-relaxed">
-                        Eu gravei vídeos curtos e diretos demonstrando exatamente como fazer cada movimento. Você assiste no celular enquanto faz.
-                    </p>
-                </div>
-
-                <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-blue-200 transition-colors">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-200">
-                            <i data-lucide="list-checks" class="w-5 h-5"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-800 text-lg">Checklist Diário</h3>
+                        <h3 class="font-bold text-slate-800 text-lg">Execução em Vídeo Real</h3>
                     </div>
                     
-                    <div class="space-y-3 mb-4">
-                        <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100 opacity-60">
-                            <div class="w-5 h-5 rounded bg-blue-600 flex items-center justify-center text-white"><i data-lucide="check" class="w-3 h-3"></i></div>
-                            <span class="text-xs font-bold text-slate-400 line-through">Drenagem de Edema</span>
-                        </div>
-                        <div class="flex items-center gap-3 p-3 bg-white rounded-xl border-l-4 border-blue-600 shadow-sm border-t border-r border-b border-slate-100">
-                            <div class="w-5 h-5 rounded border-2 border-slate-300"></div>
-                            <div>
-                                <p class="text-xs font-bold text-slate-800">Mobilidade de Dedos</p>
-                                <p class="text-[10px] text-blue-600 font-bold mt-0.5">3 séries de 15 reps</p>
+                    <div class="bg-slate-900 rounded-xl aspect-video w-full mb-4 relative overflow-hidden shadow-lg">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-90">
+                            <source src="demo-app.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <div class="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-sm backdrop-blur">
+                                <i data-lucide="play" class="w-5 h-5 text-blue-600 fill-blue-600 ml-1"></i>
                             </div>
                         </div>
                     </div>
+
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Sem bonequinhos 3D. Vídeos reais comigo demonstrando o ângulo, a velocidade e o jeito certo de fazer cada movimento. Segurança total.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-blue-200 transition-colors h-full">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-200">
+                            <i data-lucide="trophy" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-lg">Gamificação da Alta</h3>
+                    </div>
+                    
+                    <div class="space-y-3 mb-6 font-medium">
+                        <div class="flex items-center gap-3 p-3 bg-blue-50/50 rounded-xl border border-blue-100">
+                            <div class="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-sm"><i data-lucide="check" class="w-3 h-3"></i></div>
+                            <span class="text-xs font-bold text-slate-600 line-through decoration-blue-500">Pé atinge 90º (ângulo reto)</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-xl border-l-4 border-amber-500 shadow-sm border border-slate-100">
+                            <div class="w-6 h-6 rounded-full border-2 border-amber-400 bg-amber-50 flex items-center justify-center">
+                                <span class="text-[10px] font-black text-amber-600">2</span>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Larguei a 1ª muleta</p>
+                                <p class="text-[10px] text-amber-600 font-bold mt-0.5">Meta Atual: Faltam 3 dias</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 opacity-50">
+                            <div class="w-6 h-6 rounded-full border-2 border-slate-300 bg-slate-50"></div>
+                            <span class="text-xs font-bold text-slate-400">Voltei a correr (Trote)</span>
+                        </div>
+                    </div>
                     
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        O App organiza o que você precisa fazer hoje. Marque como "Feito" e veja sua barra de progresso subir. É viciante ver sua melhora.
+                        Não fique na dúvida se está melhorando. O App define metas claras para cada fase. Marque suas conquistas e veja visualmente o quanto falta para a alta.
                     </p>
                 </div>
 
@@ -197,7 +206,7 @@
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
             <div class="flex-1 order-2 md:order-1">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-800 text-[10px] font-black uppercase tracking-widest mb-4">
-                    <i data-lucide="shield-alert" class="w-3 h-3"></i> Módulo de Alerta
+                    <i data-lucide="shield-alert" class="w-3 h-3"></i> Protocolo de Segurança
                 </div>
                 <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-4">
                     A diferença entre "Dor Normal" e "Perigo".
@@ -205,43 +214,35 @@
                 <p class="text-slate-700 leading-relaxed mb-4 text-sm md:text-base">
                     No Google, qualquer dor vira trombose. No meu App, você tem um <strong>Guia de Triagem Oficial</strong>.
                     <br><br>
-                    Eu listei os sinais exatos que exigem atenção imediata. Você consulta o App e sabe na hora se pode ficar tranquilo ou se precisa procurar ajuda.
+                    Eu listei os sinais exatos que exigem atenção imediata. Você consulta o App e sabe na hora se pode ficar tranquilo ou se precisa procurar ajuda médica.
                 </p>
-                <div class="flex flex-col gap-2">
-                    <div class="flex items-center gap-2 text-xs font-bold text-red-700">
-                        <i data-lucide="check-circle-2" class="w-4 h-4"></i>
-                        Identificação de Sinais de Infecção
-                    </div>
-                    <div class="flex items-center gap-2 text-xs font-bold text-red-700">
-                        <i data-lucide="check-circle-2" class="w-4 h-4"></i>
-                        Alerta de Trombose (TVP)
-                    </div>
-                </div>
             </div>
 
             <div class="flex-1 w-full max-w-sm order-1 md:order-2">
-                <div class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-red-500 relative">
-                    <div class="absolute -top-3 -right-3 bg-red-600 text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm uppercase">Igual ao App</div>
-                    
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-red-500 relative transition-transform hover:scale-105">
                     <div class="flex items-center gap-2 mb-4">
                         <span class="text-2xl">🚨</span>
                         <h3 class="text-xs font-black text-red-800 uppercase">Sinais de Alerta (Triagem)</h3>
                     </div>
                     
-                    <p class="text-xs text-slate-500 mb-4 font-medium">Fique atento a estes sinais que NÃO são normais:</p>
+                    <p class="text-xs text-slate-500 mb-4 font-medium">Se sentir isso, procure o médico:</p>
                     
                     <div class="space-y-3">
-                        <div class="bg-red-50 p-3 rounded-lg border border-red-100">
-                            <p class="text-xs font-bold text-red-900 mb-1">Risco de Trombose</p>
-                            <p class="text-[10px] text-red-700 leading-tight">Dor aguda isolada na panturrilha, inchaço repentino.</p>
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-100 flex gap-3 items-start">
+                            <i data-lucide="alert-triangle" class="w-5 h-5 text-red-600 shrink-0 mt-0.5"></i>
+                            <div>
+                                <p class="text-xs font-bold text-red-900 mb-1">Risco de Trombose (TVP)</p>
+                                <p class="text-[11px] text-red-800 leading-tight">Dor aguda isolada na panturrilha que não passa, inchaço repentino e rigidez.</p>
+                            </div>
                         </div>
-                        <div class="bg-red-50 p-3 rounded-lg border border-red-100">
-                            <p class="text-xs font-bold text-red-900 mb-1">Sinais de Infecção</p>
-                            <p class="text-[10px] text-red-700 leading-tight">Secreção (pus), vermelhidão excessiva ou febre.</p>
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-100 flex gap-3 items-start">
+                            <i data-lucide="thermometer" class="w-5 h-5 text-red-600 shrink-0 mt-0.5"></i>
+                            <div>
+                                <p class="text-xs font-bold text-red-900 mb-1">Sinais de Infecção</p>
+                                <p class="text-[11px] text-red-800 leading-tight">Saída de secreção (pus) nos pontos, vermelhidão intensa que aumenta ou febre.</p>
+                            </div>
                         </div>
                     </div>
-                    
-                    <p class="text-[10px] text-slate-400 mt-4 italic text-center">Protocolo de segurança Dr. João Paulo</p>
                 </div>
             </div>
         </div>
@@ -303,7 +304,7 @@
                     <div class="text-xs text-slate-500 space-y-2 text-left px-4">
                         <p class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> <span><strong>Segurança:</strong> Alerta de Riscos</span></p>
                         <p class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> <span><strong>Vídeos:</strong> Demonstração correta</span></p>
-                        <p class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> <span><strong>Suporte:</strong> Área de membros</span></p>
+                        <p class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> <span><strong>Metas:</strong> Checklist de Alta</span></p>
                     </div>
                 </div>
             </div>
@@ -400,11 +401,12 @@
     <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white border-t border-slate-100 shadow-[0_-5px_15px_rgba(0,0,0,0.05)] md:hidden">
         <a href="https://pay.hotmart.com/P103439990Q?checkoutMode=10" class="flex items-center justify-between bg-green-500 text-white font-black py-3 px-6 rounded-xl shadow-lg active:scale-95 transition-transform">
             <div class="text-left">
-                <span class="block text-[10px] font-normal opacity-90 uppercase">Acesso Imediato</span>
-                <span class="block text-sm leading-none">QUERO COMEÇAR</span>
+                <span class="block text-[10px] font-normal opacity-90 uppercase flex items-center gap-1"><i data-lucide="unlock" class="w-3 h-3"></i> Acesso Imediato</span>
+                <span class="block text-sm leading-none mt-0.5">QUERO COMEÇAR</span>
             </div>
-            <div class="text-right">
+            <div class="text-right flex items-center gap-2">
                 <span class="block text-lg">R$ 47,90</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
             </div>
         </a>
     </div>
@@ -416,14 +418,14 @@
         // Lógica do Botão Sticky (Aparece ao rolar)
         const stickyCta = document.getElementById('sticky-cta');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 600) {
+            if (window.scrollY > 500) { 
                 stickyCta.classList.add('visible');
             } else {
                 stickyCta.classList.remove('visible');
             }
         });
 
-        // Rastreamento de Cliques (Facebook)
+        // Rastreamento de Cliques (Facebook InitiateCheckout)
         document.querySelectorAll('a[href*="hotmart"]').forEach(function(button) {
             button.addEventListener('click', function() {
                 fbq('track', 'InitiateCheckout'); 
