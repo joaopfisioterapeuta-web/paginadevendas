@@ -83,8 +83,8 @@
 
             <div class="relative w-full max-w-[280px] mx-auto transform hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-blue-500 blur-3xl opacity-20 rounded-full"></div>
-                <div class="phone-frame aspect-[9/19] bg-slate-100 relative z-10">
-                    <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                <div class="phone-frame aspect-[9/19] bg-black relative z-10">
+                    <video autoplay muted loop playsinline class="w-full h-full object-contain">
                         <source src="demo-app.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -148,15 +148,10 @@
                         <h3 class="font-bold text-slate-800 text-lg">Execução em Vídeo Real</h3>
                     </div>
                     
-                    <div class="bg-slate-900 rounded-xl aspect-video w-full mb-4 relative overflow-hidden shadow-lg">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-90">
+                    <div class="bg-black rounded-xl aspect-video w-full mb-4 relative overflow-hidden shadow-lg flex items-center justify-center">
+                        <video autoplay muted loop playsinline class="w-full h-full object-contain">
                             <source src="demo-ex.mp4" type="video/mp4">
                         </video>
-                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
-                            <div class="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-sm backdrop-blur">
-                                <i data-lucide="play" class="w-5 h-5 text-blue-600 fill-blue-600 ml-1"></i>
-                            </div>
-                        </div>
                     </div>
 
                     <p class="text-sm text-slate-600 leading-relaxed">
@@ -205,38 +200,43 @@
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
             <div class="flex-1 order-2 md:order-1">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-800 text-[10px] font-black uppercase tracking-widest mb-4">
-                    <i data-lucide="shield-alert" class="w-3 h-3"></i> Segurança Primeiro
+                    <i data-lucide="shield-alert" class="w-3 h-3"></i> Protocolo de Segurança
                 </div>
                 <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-4">
-                    O App que te alerta sobre o perigo.
+                    Sinais de Alerta (Triagem)
                 </h2>
                 <p class="text-slate-700 leading-relaxed mb-4 text-sm md:text-base">
                     A maior dúvida do pós-operatório é: <em>"Isso que estou sentindo é normal ou devo correr pro hospital?"</em>.
                     <br><br>
-                    O App possui um <strong>Painel de Alerta</strong>. Ele lista exatamente os sinais normais (verde) e os sinais de risco (vermelho) como trombose ou infecção.
+                    O App traz uma área exclusiva de <strong>Alerta Clínico</strong>. Você consulta os sinais de risco e sabe exatamente o que fazer.
                 </p>
             </div>
 
             <div class="flex-1 w-full max-w-sm order-1 md:order-2">
-                <div class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100 relative">
-                    <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-6 text-center">EXEMPLO: PAINEL DE ALERTA</h3>
+                <div class="bg-red-50 border-l-4 border-red-400 rounded-r-2xl p-5 shadow-lg relative bg-white">
+                    <div class="absolute -top-3 -right-3 bg-red-600 text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm uppercase">Igual ao App</div>
                     
-                    <div class="space-y-6">
-                        <div class="flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-black text-xs shrink-0">OK</div>
-                            <div>
-                                <p class="text-sm font-bold text-slate-800">Pé Roxo ao baixar</p>
-                                <p class="text-xs text-slate-500 leading-tight mt-1">Normal nas primeiras semanas. Melhora elevando a perna.</p>
-                            </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-xl">🚨</span>
+                        <h4 class="text-xs font-black text-red-800 uppercase">Sinais de Alerta (Triagem)</h4>
+                    </div>
+                    <p class="text-xs text-red-700 mb-4 opacity-80 font-medium">Fique atento a estes sinais que NÃO são normais:</p>
+                    <div class="space-y-3">
+                        <div class="bg-white p-3 rounded-xl border border-red-100 shadow-sm">
+                            <p class="text-xs font-bold text-red-900 mb-1">Risco de Trombose</p>
+                            <p class="text-[11px] text-red-700">Dor aguda isolada na panturrilha, inchaço repentino e rigidez.</p>
                         </div>
-                        
-                        <div class="flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 font-black text-sm shrink-0">⚠️</div>
-                            <div>
-                                <p class="text-sm font-bold text-red-700">Dor Aguda na Panturrilha</p>
-                                <p class="text-xs font-bold text-red-600 leading-tight mt-1">ALERTA: Possível sinal vascular. Procure médico.</p>
-                            </div>
+                        <div class="bg-white p-3 rounded-xl border border-red-100 shadow-sm">
+                            <p class="text-xs font-bold text-red-900 mb-1">Sinais de Infecção</p>
+                            <p class="text-[11px] text-red-700">Secreção (pus), vermelhidão ou febre.</p>
                         </div>
+                        <div class="bg-white p-3 rounded-xl border border-red-100 shadow-sm">
+                            <p class="text-xs font-bold text-red-900 mb-1">Circulação</p>
+                            <p class="text-[11px] text-red-700">Dedos muito pálidos ou frios.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-[10px] text-red-800 font-bold border-t border-red-200 pt-2 text-center">
+                        Procure seu médico se notar algo.
                     </div>
                 </div>
             </div>
