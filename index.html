@@ -84,7 +84,7 @@
             <div class="relative w-full max-w-[280px] mx-auto transform hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-blue-500 blur-3xl opacity-20 rounded-full"></div>
                 <div class="phone-frame aspect-[9/19] bg-black relative z-10">
-                    <video autoplay muted loop playsinline class="w-full h-full object-contain">
+                    <video autoplay muted loop playsinline class="w-full h-full object-cover">
                         <source src="demo-app.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -125,7 +125,52 @@
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-slate-50 relative overflow-hidden">
+    <section class="py-16 px-6 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-blue-600 font-bold tracking-widest text-xs uppercase">Jornada Clínica</span>
+                <h2 class="text-3xl font-black text-slate-900 mt-2">O que você vai encontrar no App?</h2>
+                <p class="text-slate-600 mt-2">Um plano organizado em 3 etapas para você não pular etapas e se machucar.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group hover:border-blue-300 transition-colors">
+                    <div class="absolute top-0 right-0 bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-1 rounded-bl-lg">Semana 0-4</div>
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-4">🛡️</div>
+                    <h3 class="font-black text-slate-800 text-lg mb-2">1. Proteção</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        <strong>Objetivo:</strong> Apagar o incêndio. Foco absoluto em desinchar e proteger a cirurgia.
+                        <br><br>
+                        <span class="text-blue-600 font-bold">O que faremos:</span> Drenagem de edema, bombeamento para circulação e ativação sem carga.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md border-2 border-blue-500 relative overflow-hidden transform md:-translate-y-2">
+                    <div class="absolute top-0 inset-x-0 h-1 bg-blue-500"></div>
+                    <div class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center text-xl mb-4">👣</div>
+                    <h3 class="font-black text-slate-800 text-lg mb-2">2. Mobilidade</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        <strong>Objetivo:</strong> Perder o medo. Recuperar o movimento de 90º do tornozelo.
+                        <br><br>
+                        <span class="text-blue-600 font-bold">O que faremos:</span> Destravar a articulação rígida e iniciar o <em class="bg-yellow-100 px-1">Desmame das Muletas</em> com segurança.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group hover:border-blue-300 transition-colors">
+                    <div class="absolute top-0 right-0 bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded-bl-lg">Reta Final</div>
+                    <div class="w-10 h-10 rounded-lg bg-green-50 text-green-600 flex items-center justify-center text-xl mb-4">💪</div>
+                    <h3 class="font-black text-slate-800 text-lg mb-2">3. Força Total</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        <strong>Objetivo:</strong> Retorno à vida. Fortalecer a panturrilha e treinar equilíbrio.
+                        <br><br>
+                        <span class="text-green-600 font-bold">O que faremos:</span> Exercícios para subir escadas, ficar na ponta do pé e andar sem mancar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-white relative overflow-hidden">
         <div class="max-w-5xl mx-auto relative z-10">
             
             <div class="text-center mb-16">
@@ -138,9 +183,9 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 items-start">
+            <div class="grid md:grid-cols-2 gap-10 items-start">
                 
-                <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-blue-200 transition-colors group h-full">
+                <div class="bg-slate-50 p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-blue-200 transition-colors group h-full">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                             <i data-lucide="play" class="w-4 h-4 fill-white"></i>
@@ -148,18 +193,19 @@
                         <h3 class="font-bold text-slate-800 text-lg">Execução em Vídeo Real</h3>
                     </div>
                     
-                    <div class="bg-black rounded-xl aspect-video w-full mb-4 relative overflow-hidden shadow-lg flex items-center justify-center">
-                        <video autoplay muted loop playsinline class="w-full h-full object-contain">
+                    <div class="bg-black rounded-2xl aspect-[9/16] w-full max-w-[240px] mx-auto mb-4 relative overflow-hidden shadow-lg flex items-center justify-center border-4 border-slate-200">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
                             <source src="demo-ex.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
                     </div>
 
-                    <p class="text-sm text-slate-600 leading-relaxed">
-                        Sem bonequinhos 3D. Vídeos reais comigo demonstrando o ângulo, a velocidade e o jeito certo de fazer cada movimento. Segurança total.
+                    <p class="text-sm text-slate-600 leading-relaxed text-center">
+                        Sem bonequinhos 3D. Vídeos reais comigo demonstrando o ângulo, a velocidade e o jeito certo de fazer cada movimento.
                     </p>
                 </div>
 
-                <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-blue-200 transition-colors h-full">
+                <div class="bg-slate-50 p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-blue-200 transition-colors h-full">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-200">
                             <i data-lucide="trophy" class="w-5 h-5"></i>
@@ -167,28 +213,34 @@
                         <h3 class="font-bold text-slate-800 text-lg">Gamificação da Alta</h3>
                     </div>
                     
-                    <div class="space-y-3 mb-6 font-medium">
-                        <div class="flex items-center gap-3 p-3 bg-blue-50/50 rounded-xl border border-blue-100">
-                            <div class="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-sm"><i data-lucide="check" class="w-3 h-3"></i></div>
-                            <span class="text-xs font-bold text-slate-600 line-through decoration-blue-500">Pé atinge 90º (ângulo reto)</span>
-                        </div>
-                        <div class="flex items-center gap-3 p-3 bg-white rounded-xl border-l-4 border-amber-500 shadow-sm border border-slate-100">
-                            <div class="w-6 h-6 rounded-full border-2 border-amber-400 bg-amber-50 flex items-center justify-center">
-                                <span class="text-[10px] font-black text-amber-600">2</span>
+                    <div class="space-y-4 mb-6 font-medium">
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-blue-100 shadow-sm">
+                            <div class="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-sm shrink-0">
+                                <i data-lucide="check" class="w-3 h-3"></i>
                             </div>
                             <div>
-                                <p class="text-xs font-bold text-slate-800">Larguei a 1ª muleta</p>
-                                <p class="text-[10px] text-amber-600 font-bold mt-0.5">Meta Atual: Faltam 3 dias</p>
+                                <p class="text-xs font-bold text-slate-800 line-through decoration-blue-500 opacity-60">Pé atinge 90º (ângulo reto)</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-3 p-3 opacity-50">
-                            <div class="w-6 h-6 rounded-full border-2 border-slate-300 bg-slate-50"></div>
-                            <span class="text-xs font-bold text-slate-400">Voltei a correr (Trote)</span>
+                        
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-xl border-l-4 border-green-500 shadow-sm border border-slate-100">
+                            <div class="w-6 h-6 rounded-full border-2 border-green-500 bg-green-50 flex items-center justify-center shrink-0">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Piso com carga parcial (sem dor)</p>
+                                <span class="bg-green-100 text-green-700 text-[9px] font-bold px-2 py-0.5 rounded-full">Conquistado!</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-3 p-3 opacity-50 border border-dashed border-slate-300 rounded-xl">
+                            <div class="w-6 h-6 rounded-full border-2 border-slate-300 bg-slate-50 shrink-0"></div>
+                            <span class="text-xs font-bold text-slate-400">Iniciei desmame muletas</span>
                         </div>
                     </div>
                     
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        Não fique na dúvida se está melhorando. O App define metas claras para cada fase. Marque suas conquistas e veja visualmente o quanto falta para a alta.
+                        Não fique na dúvida se está melhorando. O App define <strong>metas clínicas claras</strong> para cada fase. Marque suas conquistas e veja visualmente o quanto falta para a alta.
                     </p>
                 </div>
 
@@ -208,31 +260,27 @@
                 <p class="text-slate-700 leading-relaxed mb-4 text-sm md:text-base">
                     A maior dúvida do pós-operatório é: <em>"Isso que estou sentindo é normal ou devo correr pro hospital?"</em>.
                     <br><br>
-                    O App traz uma área exclusiva de <strong>Alerta Clínico</strong>. Você consulta os sinais de risco e sabe exatamente o que fazer.
+                    O App traz uma área exclusiva de <strong>Alerta Clínico</strong>, idêntica aos protocolos hospitalares.
                 </p>
             </div>
 
             <div class="flex-1 w-full max-w-sm order-1 md:order-2">
-                <div class="bg-red-50 border-l-4 border-red-400 rounded-r-2xl p-5 shadow-lg relative bg-white">
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-red-500 relative">
                     <div class="absolute -top-3 -right-3 bg-red-600 text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-sm uppercase">Igual ao App</div>
                     
                     <div class="flex items-center gap-2 mb-3">
                         <span class="text-xl">🚨</span>
-                        <h4 class="text-xs font-black text-red-800 uppercase">Sinais de Alerta (Triagem)</h4>
+                        <h4 class="text-xs font-black text-red-800 uppercase">Sinais de Alerta</h4>
                     </div>
                     <p class="text-xs text-red-700 mb-4 opacity-80 font-medium">Fique atento a estes sinais que NÃO são normais:</p>
                     <div class="space-y-3">
-                        <div class="bg-white p-3 rounded-xl border border-red-100 shadow-sm">
+                        <div class="bg-red-50 p-3 rounded-lg border border-red-100">
                             <p class="text-xs font-bold text-red-900 mb-1">Risco de Trombose</p>
-                            <p class="text-[11px] text-red-700">Dor aguda isolada na panturrilha, inchaço repentino e rigidez.</p>
+                            <p class="text-[11px] text-red-700">Dor aguda isolada na panturrilha, inchaço repentino.</p>
                         </div>
-                        <div class="bg-white p-3 rounded-xl border border-red-100 shadow-sm">
+                        <div class="bg-red-50 p-3 rounded-lg border border-red-100">
                             <p class="text-xs font-bold text-red-900 mb-1">Sinais de Infecção</p>
                             <p class="text-[11px] text-red-700">Secreção (pus), vermelhidão ou febre.</p>
-                        </div>
-                        <div class="bg-white p-3 rounded-xl border border-red-100 shadow-sm">
-                            <p class="text-xs font-bold text-red-900 mb-1">Circulação</p>
-                            <p class="text-[11px] text-red-700">Dedos muito pálidos ou frios.</p>
                         </div>
                     </div>
                     <div class="mt-4 text-[10px] text-red-800 font-bold border-t border-red-200 pt-2 text-center">
@@ -261,7 +309,7 @@
                 <p class="text-sm text-slate-600 leading-relaxed mb-4">
                     Sou <strong>Fisioterapeuta (CREFITO 362213-F)</strong> e desenvolvi este método para ser a ponte segura que faltava na sua recuperação.
                     <br><br>
-                    Ele funciona como um <strong>GPS diário e validado clinicamente</strong>, que te diz exatamente quando pisar, como fortalecer e a hora certa de voltar a viver sem limitações — tudo isso sem depender apenas das idas ao consultório.
+                    Ele funciona como um <strong>GPS diário e validado clinicamente</strong>, que te diz exatamente quando pisar, como fortalecer e a hora certa de voltar a viver sem limitações.
                 </p>
             </div>
         </div>
